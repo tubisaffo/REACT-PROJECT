@@ -28,7 +28,7 @@ function App() {
         <Header />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-      <div className="row">
+      <div className="">
         <MovieList movies={movies} />
       </div>
     </div>

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import "../App.css";
 
-function Header() {
-  return <span className="header">🎬 Movies Hub 🎥</span>;
-}
+const Header = () => {
+  return <span className="header">🎬 Entertainment Hub 🎥</span>;
+};
 
 export default Header;
