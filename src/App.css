@@ -21,6 +21,19 @@ body {
   margin-top: 0;
 }
 
+.search {
+  padding-top: 130px;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: fixed;
+ 
+}
+
 @media (max-width: 1000px) {
   .header {
     padding-top: 15px;
