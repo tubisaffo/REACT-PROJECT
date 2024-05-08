@@ -6,7 +6,7 @@ const MovieList = (props) => {
     <div>
       {props.movies.map((movie) => (
         // eslint-disable-next-line react/jsx-key
-        <div>
+        <div className="movie-app">
           <img src={movie.Poster} alt="title" />
         </div>
       ))}
