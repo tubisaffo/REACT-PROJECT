@@ -1,42 +1,52 @@
+/* Global styles */
 body {
-  background: black;
-  color : white;
+  background: #f2f2f2; /* Change background to a lighter color for better readability */
+  color: #333; /* Darken text color for better contrast */
+  font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-
+/* Header styles */
 .header {
   width: 100%;
-  cursor: pointer;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
+  top: 0;
+  left: 0;
   background-color: #39445a;
-  font-family: "Montserrat", sans-serif;
-  font-size: 5vw;
-  padding-bottom: 15px;
-  box-shadow: 0px 1px 5px black;
   color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow for depth */
   z-index: 100;
-  margin-top: 0;
 }
 
+.header h1 {
+  font-size: 2rem; /* Adjust header font size */
+  margin: 0;
+  padding: 15px 0; /* Add padding for better spacing */
+  text-align: center; /* Center align header text */
+  text-transform: uppercase;
+}
+
+/* Search styles */
 .search {
-  padding-top: 130px;
+  padding-top: 80px; /* Adjust padding for better alignment with header */
+  text-align: center; /* Center align search input */
 }
 
 .search input {
-  width: 100%;
-  padding: 8px;
+  width: 80%; /* Adjust width for better responsiveness */
+  max-width: 400px; /* Limit maximum width for larger screens */
+  padding: 12px; /* Increase padding for better touch experience */
   border: 1px solid #ccc;
-  border-radius: 4px;
-  position: fixed;
- 
+  border-radius: 20px; /* Increase border-radius for a softer look */
+  background-color: #fff; /* Add background color for input */
+  font-size: 1rem; /* Adjust font size for better readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
-@media (max-width: 1000px) {
-  .header {
-    padding-top: 15px;
-    font-size: 6.4vw;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search input {
+    width: 90%; /* Adjust width for smaller screens */
   }
 }
