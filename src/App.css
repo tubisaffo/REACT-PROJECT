@@ -25,6 +25,21 @@ body {
   z-index: 100;
 }
 
+.movie-app {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
+  /* min-height: 100vh; */
+  padding: 20px;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: wrap;
+  /* width: 100%; */
+
+}
 .header h1 {
   font-size: 2rem; /* Adjust header font size */
   margin: 0;
@@ -48,6 +63,13 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
+
+@media (max-width: 1000px) {
+  .header {
+    padding-top: 15px;
+    font-size: 6.4vw;
+  }
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .search input {
