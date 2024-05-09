@@ -11,11 +11,12 @@ body {
   font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  background-image: url("yow.jpeg");
 }
 
 /* Header styles */
 .header {
-  width: 100%;
+  width: 80%;
   cursor: pointer;
   /* position: fixed; */
   display: flex;
@@ -23,14 +24,17 @@ body {
   align-items: center;
   flex-direction: column;
   text-transform: uppercase;
-  background-color: #39445a;
-  font-family: "Montserrat", sans-serif;
-  font-size: 5vw;
+  background-color: #225ed6;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 74px;
+  font-weight: bolder;
   padding: 15px 0;
   box-shadow: 0px 1px 5px black;
-  color: white;
+  color: rgb(247, 239, 239);
   z-index: 100;
   margin-bottom: 50px;
+  background-image: url(https://i.pinimg.com/564x/e7/59/83/e75983d0104c63d9fbff045152508b08.jpg);
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -44,6 +48,8 @@ body {
   font-size: 2rem; /* Adjust header font size */
   margin: 0;
   text-transform: uppercase;
+  
+  
 }
 
 
@@ -73,6 +79,16 @@ body {
     padding-top: 15px;
     font-size: 6.4vw;
   }
+}
+footer {
+  background-image: url("https://i.pinimg.com/564x/d9/1e/a7/d91ea71b13c5e90685c13a209ec39822.jpg");
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #f2f2f2;
+
 }
 
 /* .card {
