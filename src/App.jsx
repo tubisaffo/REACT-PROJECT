@@ -1,23 +1,42 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
-import "./App.css";
 import MovieList from "./components/MovieList";
 import SearchBox from "./components/SearchBox";
-import AddFavourite from './components/AddFavourites';
+import AddFavourite from "./components/AddFavourites";
+// import AddFavorite from "./components/AddFavourites";
+import "./App.css";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [favourites, setFavourites] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const getMovieRequest = async (searchValue) => {
-    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=9a9cb4d4`;
+    setIsLoading(true);
+    setError(null);
 
-    const response = await fetch(url);
-    const responseJson = await response.json();
+    try {
+      `https://www.omdbapi.com/?s=${searchValue}&apikey=9a9cb4d4
+      const url = `;
+      const response = await fetch(url);
 
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+
+      const responseJson = await response.json();
+
+      if (responseJson.Search) {
+        setMovies(responseJson.Search);
+      } else {
+        setError("No movies found");
+      }
+    } catch (error) {
+      setError("An error occurred");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -26,7 +45,9 @@ function App() {
     setFavourites(newFavouriteList);
   };
   const removeFavouriteMovie = (movie) => {
-    const newFavouriteList = favourites.filter((favMovie) => favMovie !== movie);
+    const newFavouriteList = favourites.filter(
+      (favMovie) => favMovie !== movie
+    );
     setFavourites(newFavouriteList);
   };
 
@@ -36,17 +57,20 @@ function App() {
 
   return (
     <div className="App">
-      <div className="row">
-        <Header />
+      <Header />
+      <div className="container">
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
-        <MovieList 
-          movies={movies} 
-          favouriteComponent={AddFavourite} 
+        <MovieList
+          movies={movies}
+          favouriteComponent={AddFavourite}
           handleFavouritesClick={addFavouriteMovie}
           handleRemoveFavouritesClick={removeFavouriteMovie}
         />
+        {isLoading && <p>Loading...</p>}
+        {error && <p>{error}</p>}
+        <MovieList movies={movies} />
       </div>
     </div>
   );
