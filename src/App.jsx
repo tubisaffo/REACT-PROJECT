@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import "./App.css";
 import MovieList from "./components/MovieList";
 import SearchBox from "./components/SearchBox";
-import AddFavourite from './components/AddFavourites'; // corrected import name
+import AddFavourite from './components/AddFavourites';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -40,7 +40,7 @@ function App() {
       <div className="row">
         <MovieList 
           movies={movies} 
-          favouriteComponent={AddFavourite} // corrected component name
+          favouriteComponent={AddFavourite} 
           handleFavouritesClick={addFavouriteMovie}
           handleRemoveFavouritesClick={removeFavouriteMovie}
         />
