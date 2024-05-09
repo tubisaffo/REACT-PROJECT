@@ -61,6 +61,35 @@ body {
   }
 }
 
+/* .movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: wrap;
+  width: 100%; */
+
+.header h1 {
+  font-size: 2rem; /* Adjust header font size */
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Search styles */
+.search {
+  text-align: center; /* Center align search input */
+  margin-top: 15px; /* Add margin for spacing */
+}
+
+.search input {
+  width: 80%; /* Adjust width for better responsiveness */
+  max-width: 400px; /* Limit maximum width for larger screens */
+  padding: 12px; /* Increase padding for better touch experience */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Increase border-radius for a softer look */
+  background-color: #fff; /* Add background color for input */
+  font-size: 1rem; /* Adjust font size for better readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+
 @media (max-width: 1000px) {
   .header {
     padding-top: 15px;
