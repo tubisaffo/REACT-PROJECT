@@ -1,7 +1,7 @@
 root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
+  padding: 0;
   text-align: center;
 }
 
@@ -17,7 +17,7 @@ body {
 .header {
   width: 100%;
   cursor: pointer;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,7 @@ body {
   box-shadow: 0px 1px 5px black;
   color: white;
   z-index: 100;
+  margin-bottom: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,16 +39,14 @@ body {
   }
 }
 
-/* .movie-app > .row {
-  overflow-x: auto;
-  flex-wrap: wrap;
-  width: 100%; */
 
 .header h1 {
   font-size: 2rem; /* Adjust header font size */
   margin: 0;
   text-transform: uppercase;
 }
+
+
 
 /* Search styles */
 .search {
@@ -64,6 +63,8 @@ body {
   background-color: #fff; /* Add background color for input */
   font-size: 1rem; /* Adjust font size for better readability */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  margin-top: 120px;
+  margin-bottom: 50px;
 }
 
 
@@ -74,7 +75,7 @@ body {
   }
 }
 
-.card {
+/* .card {
   padding: 2em;
 }
 
@@ -82,10 +83,7 @@ body {
   color: #888;
 }
 
-.row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
-}
+
 
 .image-container {
   position: relative;
@@ -156,4 +154,4 @@ body {
   .search input {
     width: 90%;
   }
-}
+} */

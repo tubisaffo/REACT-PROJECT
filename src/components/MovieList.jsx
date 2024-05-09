@@ -1,4 +1,3 @@
-import React from "react";
 import ProtoTypes from "prop-types";
 
 const MovieList = (props) => {
@@ -10,7 +9,7 @@ const MovieList = (props) => {
           <img src={movie.Poster} alt="title" />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
