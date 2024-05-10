@@ -4,26 +4,23 @@ import PropTypes from "prop-types";
 const MovieList = ({ movies }) => {
   return (
     <div>
-      {movies.map((movie) => (
-        <div key={movie.imdbID}>
-          <img src={movie.Poster} alt={movie.Title} />
-          <h2>{movie.Title}</h2>
-          <p>Year: {movie.Year}</p>
+      {movies.map((movie, index) => (
+        <div key={index} style={{ marginBottom: "20px" }}>
+          <img src={movie.Poster} alt={movie.Title} style={{ maxWidth: "200px" }} />
+          <p style={{ marginTop: "5px", textAlign: "center" }}>{movie.Title}</p>
         </div>
       ))}
     </div>
   );
 };
 
+export default MovieList;
+
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
-      imdbID: PropTypes.string.isRequired,
       Poster: PropTypes.string.isRequired,
-      Title: PropTypes.string.isRequired,
-      Year: PropTypes.string.isRequired,
+      Title: PropTypes.string.isRequired
     })
-  ).isRequired,
+  ).isRequired
 };
-
-export default MovieList;

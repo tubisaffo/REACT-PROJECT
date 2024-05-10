@@ -185,13 +185,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set height to 100% of viewport height */
+  height: 100%; /* Set height to 100% of viewport height */
   background-image: url("https://i.pinimg.com/564x/e9/46/3f/e9463f48d2baa965ac0aa8eaa13d2d91.jpg"); /* Set background image */
   background-size: cover; /* Ensure background image covers the entire container */
   background-position: center; /* Center the background image */
-  color: #333; /* Darken text color for better contrast */
+  color: #333;
   font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
   padding: 25px 25px; /* Adjust padding */
-  margin-left: 60%; /* Adjust margin-left to move the items to the right */
+  margin-left: 90px; /* Adjust margin-left to move the items to the right */
 }
 
