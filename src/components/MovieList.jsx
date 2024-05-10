@@ -1,14 +1,13 @@
-import React from "react";
 import ProtoTypes from "prop-types";
 import "../App.css";
 
 
-const MovieList = ({ movies }) => {
+const MovieList = (props) => {
   return (
     <div>
       {props.movies.map((movie) => (
         // eslint-disable-next-line react/jsx-key
-        <div>
+        <div className="movie-app">
           <img src={movie.Poster} alt="title" />
         </div>
       ))}
@@ -19,10 +18,5 @@ const MovieList = ({ movies }) => {
 export default MovieList;
 
 MovieList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      Poster: PropTypes.string.isRequired,
-      Title: PropTypes.string.isRequired
-    })
-  ).isRequired
+  movies: ProtoTypes.array,
 };
