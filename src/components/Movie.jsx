@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useCallback } from "react";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
 import "../App.css";
 
 export function Movie({ search }) {
   const [movieList, setMovieList] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null); // State to store the selected movie
 
   const getMovie = useCallback(() => {
     if (search) {
@@ -25,10 +26,15 @@ export function Movie({ search }) {
     getMovie();
   }, [getMovie, search]);
 
+  // Function to handle click on a movie item
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
   return (
     <div className="MovieWrapper">
       {movieList.map((movie) => (
-        <div key={movie.id} className="MovieItem">
+        <div key={movie.id} className="MovieItem" onClick={() => handleMovieClick(movie)}>
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             className="MoviePoster"
@@ -39,6 +45,16 @@ export function Movie({ search }) {
           </p>
         </div>
       ))}
+
+      {/* Modal or overview component to display the selected movie */}
+      {selectedMovie && (
+        <div className="MovieOverview">
+          <h2>{selectedMovie.title}</h2>
+          <p>{selectedMovie.overview}</p>
+          {/* Add additional details here */}
+          <button onClick={() => setSelectedMovie(null)}>Close</button>
+        </div>
+      )}
     </div>
   );
 }
