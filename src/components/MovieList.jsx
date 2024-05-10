@@ -1,13 +1,13 @@
 import React from "react";
-import ProtoTypes from "prop-types";
+import PropTypes from "prop-types";
 
-const MovieList = (props) => {
+const MovieList = ({ movies }) => {
   return (
     <div>
-      {props.movies.map((movie) => (
-        // eslint-disable-next-line react/jsx-key
-        <div>
-          <img src={movie.Poster} alt="title" />
+      {movies.map((movie, index) => (
+        <div key={index} style={{ marginBottom: "20px" }}>
+          <img src={movie.Poster} alt={movie.Title} style={{ maxWidth: "200px" }} />
+          <p style={{ marginTop: "5px", textAlign: "center" }}>{movie.Title}</p>
         </div>
       ))}
     </div>
@@ -17,5 +17,10 @@ const MovieList = (props) => {
 export default MovieList;
 
 MovieList.propTypes = {
-  movies: ProtoTypes.array,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      Poster: PropTypes.string.isRequired,
+      Title: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
