@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "./components/Header";
 import SearchBox from "./components/SearchBox";
 import { Movie } from "./components/Movie";
-import AddFavorite from "./components/AddFavourites";
 
 import "./App.css";
 
