@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "../App.css";
+
 
 const AddFavorite = () => {
     const [isFavorite, setIsFavorite] = useState(false);

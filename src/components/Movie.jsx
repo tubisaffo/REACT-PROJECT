@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import PropTypes from "prop-types";
+import "../App.css";
 
 export function Movie({ search }) {
   const [movieList, setMovieList] = useState([]);
