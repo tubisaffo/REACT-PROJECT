@@ -26,7 +26,6 @@ export function Movie({ search }) {
     getMovie();
   }, [getMovie, search]);
 
-  // Function to handle click on a movie item
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
   };
@@ -46,12 +45,10 @@ export function Movie({ search }) {
         </div>
       ))}
 
-      {/* Modal or overview component to display the selected movie */}
       {selectedMovie && (
         <div className="MovieOverview">
           <h2>{selectedMovie.title}</h2>
           <p>{selectedMovie.overview}</p>
-          {/* Add additional details here */}
           <button onClick={() => setSelectedMovie(null)}>Close</button>
         </div>
       )}
