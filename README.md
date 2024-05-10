@@ -3,6 +3,9 @@
 
 #### By _Saffo,Ian,Edd,Mungai_
 
+![Project Screenshot](https://github.com/tubisaffo/REACT-PROJECT/issues/9#issue-2290491791)
+
+
 ## Description
 
 This is a simple movie search application built using React. It allows users to search for movies using the TMDb API and view details about the selected movie
@@ -39,7 +42,7 @@ Node.js
 
 # Live Link
 
-You can click [Here](https://online-book-reservation-web-page.vercel.app/) to view the website
+You can click [Here](https://react-project-pi-five.vercel.app/) to view the website
 or 
 
 https://github.com/tubisaffo/REACT-PROJECT/
