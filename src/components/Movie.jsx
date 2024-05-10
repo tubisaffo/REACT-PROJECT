@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import PropTypes from "prop-types";
+import MovieCard from "./MovieCard";
 
 export function Movie({ search }) {
   const [movieList, setMovieList] = useState([]);
@@ -27,10 +28,7 @@ export function Movie({ search }) {
   return (
     <div>
       {movieList.map((movie) => (
-        <img
-          key={movie.id}
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-        />
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
   );
@@ -39,3 +37,5 @@ export function Movie({ search }) {
 Movie.propTypes = {
   search: PropTypes.string,
 };
+ 
+export default Movie
