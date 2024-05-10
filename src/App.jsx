@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import SearchBox from "./components/SearchBox";
 import { Movie } from "./components/Movie";
-
+import MovieList from "./components/MovieList";
 import "./App.css";
 
 function App() {

@@ -62,15 +62,17 @@
   .search {
     text-align: center; 
     margin-top: 15px; 
+  
   }
 
   .search input {
     width: 80%; 
     max-width: 400px; 
     padding: 12px; 
+    color: rgb(222, 245, 15);
     border: 1px solid #ccc;
     border-radius: 20px; 
-    background-color: #161212; 
+    background-color: #050505; 
     font-size: 1rem; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     margin-top: 10px;
@@ -95,6 +97,7 @@
     font-weight: bolder;
     font-style: italic;
   }
+  
 
 .MovieWrapper {
   display: flex;
