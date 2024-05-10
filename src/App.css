@@ -1,27 +1,6 @@
-  root {
-    max-width: 1280px;
-    margin: 0 ;
-    padding: 0;
-    text-align: center;
-  }
-
-  body {
-    align-items: center;
-    padding-left: 30px;
-    background: #f2f2f2; /* Change background to a lighter color for better readability */
-    color: #333; /* Darken text color for better contrast */
-    font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
-    margin: 40px; /* Remove default margin */
-    padding: 25px 20px 20px 20px; /* Remove default padding */
-    background-image: url("https://i.pinimg.com/564x/e9/46/3f/e9463f48d2baa965ac0aa8eaa13d2d91.jpg");
-    width: 100%;
-  }
-
-  /* Header styles */
-  .header {
+.header {
     width: 80%;
     cursor: pointer;
-    /* position: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,30 +30,27 @@
 
 
   .header h1 {
-    font-size: 2rem; /* Adjust header font size */
+    font-size: 2rem; 
     margin: 0;
     text-transform: uppercase;
     
     
   }
 
-
-
-  /* Search styles */
   .search {
-    text-align: center; /* Center align search input */
-    margin-top: 15px; /* Add margin for spacing */
+    text-align: center; 
+    margin-top: 15px; 
   }
 
   .search input {
-    width: 80%; /* Adjust width for better responsiveness */
-    max-width: 400px; /* Limit maximum width for larger screens */
-    padding: 12px; /* Increase padding for better touch experience */
+    width: 80%; 
+    max-width: 400px; 
+    padding: 12px; 
     border: 1px solid #ccc;
-    border-radius: 20px; /* Increase border-radius for a softer look */
-    background-color: #fff; /* Add background color for input */
-    font-size: 1rem; /* Adjust font size for better readability */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    border-radius: 20px; 
+    background-color: #161212; 
+    font-size: 1rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     margin-top: 10px;
     margin-bottom: 50px;
   }
@@ -82,13 +58,13 @@
 
   @media (max-width: 1000px) {
     .header {
-      padding-top: 15px;
+      padding-top: 10px;
       font-size: 6.4vw;
     }
   }
   footer {
     background-image: url("https://i.pinimg.com/564x/a3/67/b5/a367b5b941a1fc323585beb20b795103.jpg");
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -96,102 +72,83 @@
     color: #fdfdfd;
     font-weight: bolder;
     font-style: italic;
-
-
   }
+.MovieWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  /* .card {
-    padding: 2em;
-  }
+.MoviePoster {
+  max-width: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .read-the-docs {
-    color: #888;
-  }
+.MoviePoster:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.MovieTitle {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  color: white;
+}
 
+ */
+ .MovieWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.MovieItem {
+  margin: 10px;
+  cursor: pointer;
+}
 
-  .image-container {
-    position: relative;
-    transition: transform 0.2s;
-  }
+.MovieItem img {
+  max-width: 200px;
+  border-radius: 8px;
+}
 
-  .image-container:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
+.MovieTitle {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #333;
+  padding: 8px;
+}
 
-  .image-container:hover .overlay {
-    opacity: 1;
-  }
+.MovieOverview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
 
-  .overlay {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    transition: 0.5s ease;
-    opacity: 0;
-    bottom: 0;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-  }
+.MovieOverview h2 {
+  margin-top: 0;
+}
 
-  .movie-app {
-    justify-content: center;
-    padding: 20px;
-  }
+.MovieOverview p {
+  margin-bottom: 20px;
+}
 
-  .movie-app > .row {
-    overflow-x: auto;
-    flex-wrap: wrap;
-  }
-
-  .header h1 {
-    font-size: 2rem;
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  .search {
-    width: 100%;
-    padding: 8px;
-  }
-
-  .search input {
-    width: 80%;
-    max-width: 400px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #fff;
-    font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  @media (max-width: 1000px) {
-    .header {
-      padding-top: 15px;
-      font-size: 6.4vw;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .search input {
-      width: 90%;
-    }
-  } */
-  .MovieList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set height to 100% of viewport height */
-    background-image: url("https://i.pinimg.com/564x/e9/46/3f/e9463f48d2baa965ac0aa8eaa13d2d91.jpg"); /* Set background image */
-    background-size: cover; /* Ensure background image covers the entire container */
-    background-position: center; /* Center the background image */
-    color: #333; /* Darken text color for better contrast */
-    font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
-    padding: 25px 20px; /* Adjust padding */
-    margin: 0; /* Remove default margin */
-  }
-  
-
+.MovieOverview button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}

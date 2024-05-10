@@ -8,8 +8,8 @@ const AddFavorite = () => {
     };
 
     return (
-        <>
-            <span className='mr-2' onClick={toggleFavorite}>
+        <div className="favorite-container">
+            <span className="mr-2" onClick={toggleFavorite}>
                 {isFavorite ? 'Favorite' : 'Not a Favorite'}
             </span>
             <svg
@@ -27,7 +27,7 @@ const AddFavorite = () => {
                     d='M8 .753l1.647 3.795 4.325.396a.475.475 0 0 1 .264.816l-3.274 2.735.955 4.655a.475.475 0 0 1-.725.5L8 12.347l-3.954 2.09a.475.475 0 0 1-.725-.5l.955-4.655-3.274-2.735a.475.475 0 0 1 .264-.816l4.325-.396L8 .753z'
                 />
             </svg>
-        </>
+        </div>
     );
 };
 
