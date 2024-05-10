@@ -10,8 +10,10 @@ body {
   color: #333; /* Darken text color for better contrast */
   font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
   margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  background-image: url("yow.jpeg");
+  padding: 25px 20px 20px 20px; /* Remove default padding */
+  background-image: url("https://i.pinimg.com/564x/00/81/b6/0081b6169b11a806603d770b179f974a.jpg");
+  align-items: center;
+  width: 100%;
 }
 
 /* Header styles */
@@ -24,17 +26,19 @@ body {
   align-items: center;
   flex-direction: column;
   text-transform: uppercase;
-  background-color: #225ed6;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 74px;
   font-weight: bolder;
-  padding: 15px 0;
+  padding-left: 24px;
+  padding-bottom: 30px;
+  padding-right: 25px;
+  padding-top: 15px;
   box-shadow: 0px 1px 5px black;
   color: rgb(247, 239, 239);
   z-index: 100;
   margin-bottom: 50px;
   background-image: url(https://i.pinimg.com/564x/e7/59/83/e75983d0104c63d9fbff045152508b08.jpg);
-  
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -81,13 +85,16 @@ body {
   }
 }
 footer {
-  background-image: url("https://i.pinimg.com/564x/d9/1e/a7/d91ea71b13c5e90685c13a209ec39822.jpg");
+  background-image: url("https://i.pinimg.com/564x/a3/67/b5/a367b5b941a1fc323585beb20b795103.jpg");
   padding: 20px;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: #f2f2f2;
+  color: #fdfdfd;
+  font-weight: bolder;
+  font-style: italic;
+
 
 }
 
