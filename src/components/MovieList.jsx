@@ -1,5 +1,7 @@
 import React from "react";
 import ProtoTypes from "prop-types";
+import "../App.css";
+
 
 const MovieList = ({ movies }) => {
   return (
