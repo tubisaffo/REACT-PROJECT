@@ -15,6 +15,7 @@ body {
   padding: 25px 20px 20px 20px; /* Remove default padding */
   background-image: url("https://i.pinimg.com/564x/e9/46/3f/e9463f48d2baa965ac0aa8eaa13d2d91.jpg");
   width: 100%;
+  
 }
 
 /* Header styles */
@@ -191,6 +192,6 @@ footer {
   color: #333; /* Darken text color for better contrast */
   font-family: "Montserrat", sans-serif; /* Adjust font family for consistency */
   padding: 25px 25px; /* Adjust padding */
-  margin-left: 50px; /* Adjust margin-left to move the items to the right */
+  margin-left: 60%; /* Adjust margin-left to move the items to the right */
 }
 
