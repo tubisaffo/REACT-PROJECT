@@ -1,28 +1,34 @@
 // NavBar component
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import PropTypes from "prop-types";
 import MovieCard from './MovieCard';
 
-function NavBar() {
+function NavBar({ search }) {
     const base_url = "https://api.themoviedb.org/3";
     const API_key = "&api_key=bead54d2565b9e69388ab12b09cb4d40";
     let arr = ["Popular", "Theatre", "Kids", "Drama", "Comedie"];
-    const [movieData, setData] = useState(null);
+    const [movieData, setData] = useState([]);
     const [url, setUrl] = useState('');
 
-    useEffect(() => {
-        if (url) {
-            fetchData();
+    const fetchData = useCallback(() => {
+        if (search) {
+            fetch(
+                `https://api.themoviedb.org/3/search/movie?api_key=bead54d2565b9e69388ab12b09cb4d40&query=${search}`
+            )
+                .then((res) => res.json())
+                .then((json) => setData(json.results));
+        } else {
+            fetch(url)
+                .then((res) => res.json())
+                .then((json) => setData(json.results));
         }
-    }, [url]);
+    }, [search]);
 
-    const fetchData = () => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setData(data.results);
-            })
-            .catch(error => console.error('Error fetching data: ', error));
-    };
+    useEffect(() => {
+        if(url){
+            fetchData();
+        }  
+    }, [url, search]);
 
     const handleItemClick = (movieType) => {
         let newUrl = '';
@@ -58,12 +64,15 @@ function NavBar() {
                 </ul>
             </nav>
             <div>
-                {movieData !== null && movieData.map((movie, index) => (
+                {movieData.length > 0 && movieData.map((movie, index) => (
                     <MovieCard key={index} movie={movie} />
                 ))}
             </div>
         </div>
     );
 }
+NavBar.propTypes = {
+    search: PropTypes.string,
+};
 
 export default NavBar;
