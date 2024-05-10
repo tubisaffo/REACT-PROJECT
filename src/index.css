@@ -48,6 +48,6 @@ button:hover {
   border-color: #646cff;
 }
 button:focus,
-button:focus-visible { /* Added comma to separate selectors */
+button:focus-visible { 
   outline: 4px auto -webkit-focus-ring-color;
 }
