@@ -1,13 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+import ProtoTypes from "prop-types";
 
 const MovieList = ({ movies }) => {
   return (
     <div>
-      {movies.map((movie, index) => (
-        <div key={index} style={{ marginBottom: "20px" }}>
-          <img src={movie.Poster} alt={movie.Title} style={{ maxWidth: "200px" }} />
-          <p style={{ marginTop: "5px", textAlign: "center" }}>{movie.Title}</p>
+      {props.movies.map((movie) => (
+        // eslint-disable-next-line react/jsx-key
+        <div>
+          <img src={movie.Poster} alt="title" />
         </div>
       ))}
     </div>

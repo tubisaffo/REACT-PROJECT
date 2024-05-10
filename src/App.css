@@ -1,4 +1,10 @@
-/* Global styles */
+root {
+  max-width: 1280px;
+  margin: 0 ;
+  padding: 0;
+  text-align: center;
+}
+
 body {
   background: #f2f2f2; /* Change background to a lighter color for better readability */
   color: #333; /* Darken text color for better contrast */
@@ -10,27 +16,42 @@ body {
 /* Header styles */
 .header {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  cursor: pointer;
+  /* position: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
   background-color: #39445a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5vw;
+  padding: 15px 0;
+  box-shadow: 0px 1px 5px black;
   color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow for depth */
   z-index: 100;
+  margin-bottom: 50px;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
 
 .header h1 {
   font-size: 2rem; /* Adjust header font size */
   margin: 0;
-  padding: 15px 0; /* Add padding for better spacing */
-  text-align: center; /* Center align header text */
   text-transform: uppercase;
 }
 
+
+
 /* Search styles */
 .search {
-  padding-top: 80px; /* Adjust padding for better alignment with header */
   text-align: center; /* Center align search input */
+  margin-top: 15px; /* Add margin for spacing */
 }
 
 .search input {
@@ -42,11 +63,95 @@ body {
   background-color: #fff; /* Add background color for input */
   font-size: 1rem; /* Adjust font size for better readability */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  margin-top: 120px;
+  margin-bottom: 50px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .search input {
-    width: 90%; /* Adjust width for smaller screens */
+
+@media (max-width: 1000px) {
+  .header {
+    padding-top: 15px;
+    font-size: 6.4vw;
   }
 }
+
+/* .card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-app {
+  justify-content: center;
+  padding: 20px;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.search {
+  width: 100%;
+  padding: 8px;
+}
+
+.search input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding-top: 15px;
+    font-size: 6.4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .search input {
+    width: 90%;
+  }
+} */
